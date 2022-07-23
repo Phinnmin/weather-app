@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/style.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
     <title>Weather App</title>
 </head>
 <body>
@@ -24,91 +26,79 @@
         <div class="WeatherInfo">
             <div class="row">
                 <div class="col-6">
-                    <h1>Nordenham</h1>
+                    <h1 id="city"></h1>
                     <ul>
                         <li>
-                            <span>
-                                Saturday
-                                12
-                                :
-                                38
+                            <span id="date">
                             </span>
-                            ,
-                            clear sky
                         </li>
+                        <li id="description">
+                            <li>Humidity: <span id="humidity"></span>%</li>
+                         </li> 
                         <li>
-                            Humidity: 
-                            <strong>
-                                73
-                                %
-                            </strong>
-                            , Wind:
-                            <strong>
-                                5.9
-                                km/h
-                            </strong>
-                        </li>
+                            Wind:<span id="wind"></span>
+                        m/h</li>
                     </ul>
                 </div>
                 <div class="col-6">
                     <div class="temperature-container ">
                         <canvas width="52" height="52"></canvas>
                             <div>
-                                <span class="temperature">18</span>
+                                <span id="temperature"class="temperature"></span>
                                 <span class="unit">°C</span>
                             </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="WeatherForecast row">
+        <div class="WeatherForecast row" id="forecast">
             <div class="col">
                 <div class="WeatherForecastPreview">
-                    <div class="forecast-time">Sat</div>
+                    <div class="weather-forecast-date">Sat</div>
                     <canvas width="38" height="38"></canvas>
-                    <div class="forecast-temperature">
-                        <span class="forecast-temperature-max">35°</span>
-                        <span class="forecast-temperature-min">25°</span>
+                    <div class="weather-forecast-temperatures">
+                        <span class="weather-forecast-temperature-max">°</span>
+                        <span class="weather-forecast-temperature-min">°</span>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="WeatherForecastPreview">
-                    <div class="forecast-time">Sun</div>
+                    <div class="weather-forecast-date">Sun</div>
                     <canvas width="38" height="38"></canvas>
-                    <div class="forecast-temperature">
-                        <span class="forecast-temperature-max">35°</span>
-                        <span class="forecast-temperature-min">25°</span>
+                    <div class="weather-forecast-temperatures">
+                        <span class="weather-forecast-temperature-max">°</span>
+                        <span class="weather-forecast-temperature-min">°</span>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="WeatherForecastPreview">
-                    <div class="forecast-time">Mon</div>
+                    <div class="weather-forecast-date">Mon</div>
                     <canvas width="38" height="38"></canvas>
-                    <div class="forecast-temperature">
-                        <span class="forecast-temperature-max">35°</span>
-                        <span class="forecast-temperature-min">25°</span>
+                    <div class="weather-forecast-temperatures">
+                        <span class="weather-forecast-temperature-max">°</span>
+                        <span class="weather-forecast-temperature-min">°</span>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="WeatherForecastPreview">
-                    <div class="forecast-time">Tue</div>
+                    <div class="weather-forecast-date">Tue</div>
                     <canvas width="38" height="38"></canvas>
-                    <div class="forecast-temperature">
-                        <span class="forecast-temperature-max">35°</span>
-                        <span class="forecast-temperature-min">25°</span>
+                    <div class="weather-forecast-temperatures">
+                        <span class="weather-forecast-temperature-max"></span>
+                        <span class="weather-forecast-temperature-min">°</span>
                     </div>
                 </div>
             </div>
             <div class="col">
                 <div class="WeatherForecastPreview">
-                    <div class="forecast-time">Wed</div>
+                    <div class="weather-forecast-date">Wed</div>
                     <canvas width="38" height="38"></canvas>
-                    <div class="forecast-temperature">
-                        <span class="forecast-temperature-max">35°</span>
-                        <span class="forecast-temperature-min">25°</span>
+                    <div class="weather-forecast-temperatures">
+                        <span class="weather-forecast-temperature-max"></span>
+                        <span class="weather-forecast-temperature-min">°</span>
                     </div>
                 </div>
             </div>
