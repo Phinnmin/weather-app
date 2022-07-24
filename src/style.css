@@ -12,12 +12,9 @@ body {
     margin-left:40px;
  }
  form {
-    display: block;
-    margin-left: 193px;
-    margin-top:12px;
-    border-bottom: 1px solid #f9f7fe;
-    padding-bottom: 30px;
-    box-sizing: border-box;
+  margin-top: 40px;
+  border-bottom: 1px solid #f9f7fe;
+  padding-bottom: 30px;
 }
 
  ul {
@@ -40,7 +37,13 @@ body {
     font-weight: 100;
     line-height: 19px;
   }
-
+footer {
+  font-size: 14px;
+  margin-top: 40px;
+  line-height: 18px;
+  text-align: center;
+  color: rgba(39,33,66,.4);
+}
 .container {
     max-width: 600px;
     margin: 30px auto;
@@ -55,6 +58,37 @@ body {
     padding-bottom: 50px;
 }
 
+.search-input {
+  background: #f9f7fe;
+  border: none;
+  padding: 15px 20px;
+  display: inline-block;
+  border-radius: 6px;
+  color: rgb(115, 112, 122);
+  font-size: 15px;
+  height: 50px;
+  line-height: 20px;
+  margin-right: 200px;
+  width: 99%;
+}
+.btn {
+  background: #885df1;
+  font-weight: 200;
+  font-size: 17px;
+  padding: 0 13px;
+  border: none;
+  height: 51px;
+  border-radius: 6px;
+  width: 166%;
+}
+.btn-primary {
+  color: #fff;
+}
+.btn:hover {
+  border: none;
+  cursor: pointer;
+  background: #4f358f;
+}
 .row {
     display: flex;
     margin-right: -15px;
@@ -71,7 +105,7 @@ body {
   .temperature-container .temperature {
     color: #212121;
     font-weight: 400;
-    margin-left: 208px;
+    margin-left: 206px;
     margin-top: 12px;
     font-weight: 700;
     font-size: 80px;
@@ -81,4 +115,5 @@ body {
     position: relative;
   font-size: 16px;
   top: -34px;
+  margin-left: 208px;
 }
