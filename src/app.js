@@ -101,14 +101,9 @@ axios.get(apiUrl).then(displayTemperature);
 function handleSubmit(event){
     event.preventDefault();
     let cityInputElement = document.querySelector("#city-input");
-  search(cityInputElement.value);
+    search(cityInputElement.value);
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
 search("Nordenham");
-let apiKey="ba3981145502fe2be879fbb5afae620c";
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=Nordenham&appid=${apiKey}&units=metric`;
-
-
-axios.get(apiUrl).then(displayTemperature);
