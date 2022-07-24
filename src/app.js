@@ -92,18 +92,18 @@ function displayTemperature(response) {
   getForecast(response.data.coord);
 }
 
-function search(city){
+function searchCity(city){
     let apiKey="ba3981145502fe2be879fbb5afae620c";
-let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=Nordenham&appid=${apiKey}&units=metric`;
+let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
 axios.get(apiUrl).then(displayTemperature);
 }
 
 function handleSubmit(event){
     event.preventDefault();
-    let cityInputElement = document.querySelector("#city-input");
-    search(cityInputElement.value);
+    let city = document.querySelector("#city-input").value;
+    searchCity(city);
 }
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSubmit);
 
-search("Nordenham");
+searchCity("Nordenham");
